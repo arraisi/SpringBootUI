@@ -72,7 +72,7 @@ export default {
 					})
 					.then(response => {
 						this.$router.push({
-							path: "hello"
+							path: "person"
 						});
 					})
 					.catch(error => {
