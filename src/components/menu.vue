@@ -2,7 +2,7 @@
 	<v-app>
 		<!-- App Bar -->
 		<v-app-bar dense absolute color="rgba(255, 255, 255, 0.75) !important" style="backdrop-filter: blur(10px); padding-left: 56px" elevate-on-scroll scroll-target="#scrolling-techniques-7">
-			<v-toolbar-title :style="{ paddingLeft: '8px' }"><b>Quarkus UI</b></v-toolbar-title>
+			<v-toolbar-title :style="{ paddingLeft: '8px' }"><b>SpringBoot UI</b></v-toolbar-title>
 			<v-spacer></v-spacer>
 			<v-divider class="mx-4" inset vertical></v-divider>
 			<v-btn small class="mr-1" icon @click="logout">

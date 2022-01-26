@@ -54,7 +54,7 @@ export default {
 	methods: {
 		personList() {
 			this.loading = true;
-			axios.get("/api/person").then((response) => {
+			axios.get("/person").then((response) => {
 				this.loading = false;
 				this.data = response.data;
 			});

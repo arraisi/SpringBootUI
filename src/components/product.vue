@@ -136,7 +136,7 @@ export default {
 	methods: {
 		initialize() {
 			this.loading = true;
-			axios.get(`/api/product`).then((response) => {
+			axios.get(`/product`).then((response) => {
 				//Then injecting the result to datatable parameters.
 				this.loading = false;
 				this.data = response.data;
@@ -156,7 +156,7 @@ export default {
 		},
 
 		deleteItemConfirm() {
-			axios.delete(`/api/product/${this.editedItem.id}`).then((response) => {
+			axios.delete(`/product/${this.editedItem.id}`).then((response) => {
 				this.closeDelete();
 			});
 		},
@@ -184,11 +184,11 @@ export default {
 		save() {
 			this.loading = true;
 			if (this.editedIndex > -1) {
-				axios.put(`/api/product`, this.editedItem).then((response) => {
+				axios.put(`/product`, this.editedItem).then((response) => {
 					this.close();
 				});
 			} else {
-				axios.post(`/api/product`, this.editedItem).then((response) => {
+				axios.post(`/product`, this.editedItem).then((response) => {
 					this.close();
 				});
 			}

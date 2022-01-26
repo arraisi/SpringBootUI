@@ -185,7 +185,7 @@ export default {
   methods: {
     initialize() {
       this.loading = true;
-      axios.get(`/api/shop`).then((response) => {
+      axios.get(`/shop`).then((response) => {
         //Then injecting the result to datatable parameters.
         this.loading = false;
         this.data = response.data;
@@ -194,7 +194,7 @@ export default {
     },
 
     listProduct() {
-      axios.get(`/api/product`).then((response) => {
+      axios.get(`/product`).then((response) => {
         //Then injecting the result to datatable parameters.
         this.products = response.data;
       });
@@ -213,7 +213,7 @@ export default {
     },
 
     deleteItemConfirm() {
-      axios.delete(`/api/shop/${this.editedItem.id}`).then((response) => {
+      axios.delete(`/shop/${this.editedItem.id}`).then((response) => {
         this.closeDelete();
       });
     },
@@ -243,11 +243,11 @@ export default {
       this.loading = true;
       if (this.editedIndex > -1) {
         // update
-        axios.put(`/api/shop/qty`, this.editedItem).then(() => {
+        axios.put(`/shop/qty`, this.editedItem).then(() => {
           this.close();
         });
       } else {
-        axios.post(`/api/shop`, this.editedItem).then(() => {
+        axios.post(`/shop`, this.editedItem).then(() => {
           this.close();
         });
       }
