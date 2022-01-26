@@ -45,7 +45,6 @@ export default new Vuex.Store({
 			});
 		},
         logout() {
-            this.state.principal = {map: {dark_mode: false}};
             delete axios.defaults.headers.common["Authorization"];
             localStorage.removeItem("principal");
         },
